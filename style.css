@@ -1,14 +1,18 @@
 /* =========================================
-   CONFIGURACIÓN GENERAL - CASA TOPINAMBUR
+   VARIABLES DE MARCA - CASA TOPINAMBUR
    ========================================= */
 :root {
-    --amarillo-topinambur: #FFD700; /* El color de tu logo */
-    --azul-oceano: #0077BE;        /* El azul del mar en tu logo */
-    --naranja-acento: #FF7043;      /* El naranja de las letras del logo */
-    --fondo-arena: #F9F9F9;
-    --texto-oscuro: #37474F;
+    --amarillo-topinambur: #FFD700; /* El girasol de tu logo */
+    --azul-oceano: #0077BE;        /* El mar de tu logo */
+    --naranja-logo: #FF7043;       /* El tono de las letras del logo */
+    --fondo-arena: #F9F9F9;        /* Color crema suave para el fondo */
+    --texto-oscuro: #37474F;       /* Gris azulado para lectura */
+    --whatsapp-green: #25D366;
 }
 
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
 body {
     font-family: 'Open Sans', sans-serif;
     color: var(--texto-oscuro);
@@ -18,43 +22,45 @@ body {
 
 h1, h2, h3, .navbar-brand {
     font-family: 'Montserrat', sans-serif;
-    color: var(--azul-oceano); /* Títulos en azul marino */
+    color: var(--azul-oceano);
 }
 
 /* =========================================
-   NAVBAR (ESTILO PLAYERO)
+   NAVBAR PERSONALIZADA
    ========================================= */
 .navbar {
-    background-color: white !important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid var(--amarillo-topinambur);
+}
+
+.navbar-brand span {
+    color: var(--azul-oceano);
+}
+
+.navbar-brand .topinambur-text {
+    color: var(--naranja-logo); /* Coincide con tu logo */
 }
 
 .nav-link {
     font-weight: 600;
     color: var(--azul-oceano) !important;
-    transition: 0.3s;
 }
 
 .nav-link:hover {
-    color: var(--naranja-acento) !important;
-}
-
-.navbar-brand {
-    font-weight: bold;
-    color: var(--azul-oceano) !important;
+    color: var(--naranja-logo) !important;
 }
 
 /* =========================================
-   HERO SECTION
+   HERO SECTION (CON VIDEO O IMAGEN)
    ========================================= */
 .hero-section {
     position: relative;
     height: 100vh;
-    width: 100%;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 #bg-video {
@@ -63,12 +69,9 @@ h1, h2, h3, .navbar-brand {
     left: 50%;
     min-width: 100%; 
     min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
     transform: translate(-50%, -50%);
     object-fit: cover;
-    pointer-events: none;
+    z-index: 0;
 }
 
 .overlay {
@@ -77,57 +80,49 @@ h1, h2, h3, .navbar-brand {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 119, 190, 0.4); /* Overlay azulado sutil */
+    background: rgba(0, 50, 80, 0.5); /* Azul profundo translúcido */
     z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: white;
 }
 
 .btn-reserve-hero {
     background-color: var(--amarillo-topinambur);
-    color: var(--azul-oceano) !important; /* Texto azul para contraste */
+    color: var(--azul-oceano) !important;
     border: none;
-    padding: 15px 40px;
+    padding: 15px 35px;
     font-size: 1.2rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    border-radius: 50px; /* Bordes más redondeados y amigables */
+    font-weight: bold;
+    border-radius: 50px;
     transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-transform: uppercase;
 }
 
 .btn-reserve-hero:hover {
-    background-color: var(--naranja-acento);
+    background-color: var(--naranja-logo);
     color: white !important;
-    transform: translateY(-3px) scale(1.05);
+    transform: scale(1.05);
 }
 
 /* =========================================
-   FORMULARIO Y TARJETAS
+   TARJETAS Y CALCULADORA DE RESERVA
    ========================================= */
 .card {
     border: none;
     border-radius: 20px;
-    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .card-header {
     background-color: var(--azul-oceano) !important;
     color: white;
-    font-weight: bold;
     text-align: center;
-    border: none;
+    border-radius: 20px 20px 0 0 !important;
+    font-weight: bold;
 }
 
 .form-control {
-    border-radius: 12px;
-    padding: 12px;
+    border-radius: 10px;
     border: 2px solid #eee;
+    padding: 12px;
 }
 
 .form-control:focus {
@@ -135,43 +130,35 @@ h1, h2, h3, .navbar-brand {
     box-shadow: none;
 }
 
-/* Botón de Enviar Formulario */
-#contactForm button[type="submit"] {
-    background-color: var(--naranja-acento);
-    border: none;
-    transition: 0.3s;
-}
-
-#contactForm button[type="submit"]:hover {
-    background-color: var(--azul-oceano);
-    transform: translateY(-2px);
+/* Precio destacado */
+#precioTotal {
+    color: var(--azul-oceano);
 }
 
 /* =========================================
    BOTÓN WHATSAPP
    ========================================= */
 .btn-whatsapp {
-    background-color: #25d366;
+    background-color: var(--whatsapp-green);
     color: white;
-    border-radius: 50px; /* Redondeado total */
-    padding: 12px 25px;
-    font-weight: bold;
+    border-radius: 12px;
     transition: 0.3s;
     border: none;
 }
 
 .btn-whatsapp:hover {
     background-color: #128c7e;
-    transform: scale(1.05);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
 }
 
 /* =========================================
-   CAROUSEL Y UTILIDADES
+   CAROUSEL Y OTROS
    ========================================= */
 .carousel {
-    border-radius: 2.5rem;
+    border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 .carousel-item img {
@@ -180,15 +167,16 @@ h1, h2, h3, .navbar-brand {
 }
 
 .text-warning { 
-    color: var(--naranja-acento) !important; 
+    color: var(--amarillo-topinambur) !important; 
 }
 
-/* Ajustes para móviles */
+/* Estilo para el footer */
+footer {
+    background-color: var(--azul-oceano) !important;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.2rem;
-    }
-    .carousel-item img {
-        height: 300px;
-    }
+    .carousel-item img { height: 300px; }
+    .hero-section h1 { font-size: 2.5rem; }
 }
