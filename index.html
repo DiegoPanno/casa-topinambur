@@ -358,6 +358,26 @@
                         required
                       />
                     </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-bold"
+                        >Código de Descuento (Opcional)</label
+                      >
+                      <div class="input-group">
+                        <span class="input-group-text"
+                          ><i class="fas fa-tag"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cupon"
+                          placeholder="Ingresá tu código aquí"
+                        />
+                      </div>
+                      <div
+                        id="cuponFeedback"
+                        class="form-text mt-1 d-none"
+                      ></div>
+                    </div>
                     <div class="form-text text-end fw-bold text-dark mt-1">
                       Tarifa: $40.000 por persona/día
                     </div>
@@ -368,7 +388,7 @@
                       <p class="mb-1 text-muted text-uppercase small fw-bold">
                         Presupuesto Estimado
                       </p>
-                      <h3 class="mb-0 text-success fw-bold">
+                      <h3 class="mb-0 text-success fw-bold" id="precioTotal">
                         $<span>40.000</span>
                       </h3>
                     </div>

@@ -195,3 +195,13 @@ footer iframe {
 footer iframe:hover {
     filter: grayscale(0); /* Al pasar el mouse se ve a todo color */
 }
+
+
+#cuponFeedback {
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
