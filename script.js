@@ -1,7 +1,7 @@
 const PRECIO_POR_DIA_PERSONA = 40000;
 
 const CUPONES = {
-    "SURF2026": 0.10,
+    "CARNAVAL2026": 0.10,
     "TOPINAMBUREÑO": 0.15,
     "BIENVENIDO": 0.05
 };
