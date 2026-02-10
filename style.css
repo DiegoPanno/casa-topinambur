@@ -20,9 +20,15 @@ body {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, .navbar-brand {
+h1, h2, .navbar-brand {
     font-family: 'Montserrat', sans-serif;
     color: var(--azul-oceano);
+}
+
+h3, .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--naranja-logo);
+    font-weight: bold;
 }
 
 /* =========================================
