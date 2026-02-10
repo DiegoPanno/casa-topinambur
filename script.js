@@ -70,7 +70,7 @@ document.getElementById('reservaForm').addEventListener('submit', function(e) {
                     `📅 *Check-in:* ${checkinVal}%0A` +
                     `📅 *Check-out:* ${checkoutVal}%0A` +
                     `---------------------------------%0A` +
-                    `💰 *Presupuesto Total:* $${totalFinal}%0A` +
+                    `💰 *Presupuesto Total:* ${totalFinal}%0A` +
                     `---------------------------------%0A` +
                     `¿Tienen lugar para nosotros?`;
 
