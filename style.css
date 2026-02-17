@@ -205,3 +205,14 @@ footer iframe:hover {
 .text-success {
     color: #28a745 !important;
 }
+
+.promo-banner .card {
+    background: linear-gradient(45deg, var(--amarillo-topinambur), #ffd32a);
+    animation: soft-pulse 2s infinite;
+}
+
+@keyframes soft-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.01); }
+    100% { transform: scale(1); }
+}
